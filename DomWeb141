@@ -1,1 +1,318 @@
-y
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">  
+<title>Dominion's Portfolio</title>    
+
+<style type="text/css">    
+html {scroll-behavior: smooth;}    
+body {
+  width: 100%;    
+  color: rgb(227, 238, 239);    
+  background: linear-gradient(to bottom left, #004647, black);    
+  margin: 0;    
+  padding: 0;    
+  font-size: 15px;    
+  font-family: 'Poppins', Arial, sans-serif;    
+}  
+
+header {padding: 0;}  
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+}
+
+/* new sliding wrapper */
+.slides-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile {
+  display: flex;  
+  margin: auto;  
+  width: 100%;  
+  height: 600px;  
+  border: 0.8px solid rgb(132, 250, 161);  
+  border-radius: 3%;  
+  margin-bottom: 100px;  
+  filter: sepia(50%) contrast(90%) hue-rotate(30deg);  
+  transition: filter 0.5s;  
+}
+.profile:hover {filter: none;}  
+
+header h2 {
+  font-size: 37px;
+  margin: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}  
+header nav {text-align: center; margin-left: 20px;}  
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 16.5px;
+  margin: 10px;
+  padding: 0;
+}  
+header li {
+  margin-right: 30px;
+  height: 50px;
+  width: 70px;
+  border-bottom: 1px solid rgb(132, 250, 161);
+}  
+header a {text-decoration: none; color: white;}  
+
+.intro p {font-size: 13px; color: #888;}  
+
+section {
+  padding: 10px;
+  padding-bottom: 30px;
+  margin: 20px;
+  margin-bottom: 60px;
+  border-bottom: 2px solid rgb(132, 250, 161);
+}
+section h2 {font-size: 30px;}
+section ul {list-style-type: none; text-align: left; padding: 10px;}
+section li {margin-bottom: 30px; font-size: 14px;}
+.contact ul {color:rgb(132, 197, 161);}  
+
+footer {
+  margin-top: 90px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  padding: 40px;
+  color: #888;
+  text-align: center;
+}
+h1, h2 {color:rgb(132, 197, 161);}  
+div h1 {font-size: 50px; text-align: center;}  
+
+.imtx {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  z-index: 1;
+  border-bottom: 5px solid rgb(132, 197, 161);
+}
+
+/* keep your button style */
+button {
+  width: 100px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 10px;
+  font-size: 50px;
+  background: #797;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  opacity: .5;
+  cursor: pointer;
+}
+.next {right: 0;}
+.prev {left: 0;}
+
+/* dots */
+.dot {
+  height: 20px;
+  width: 20px;
+  background: #797;
+  position: absolute;
+  left: 100px;
+  border-radius: 50%;
+  bottom: -15%;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.a {left: 130px;}
+.b {left: 170px;}
+.c {left: 210px;}
+
+.indicator {
+  height: 20px;
+  width: 20px;
+  background: rgb(132, 199, 161);
+  position: absolute;
+  left: 130px;
+  bottom: -15%;
+  border-radius: 50%;
+  transition: left .5s ease-in-out;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#Intro" >Home</a></li>
+      <li><a href="#About-me" >About</a></li>
+      <li><a href="#Projects" >Projects</a></li>
+      <li><a href="#Contact" >Contact</a></li>
+    </ul>
+  </nav>
+
+  <div><h1>Welcome!</h1></div>
+  <div class="hero">
+    <div class="imtx"><h2>To My Portfolio</h2></div>
+
+    <div class="slides-wrapper">
+      <div class="slide">
+        <img src="Img/Snapchat2.jpg" alt="Dominion Okori Portrait" class="profile"/>
+      </div>
+      <div class="slide">
+        <img src="Img/Snapchat.jpg" alt="Dominion Okori Portrait" class="profile"/>
+      </div>
+      <div class="slide">
+        <img src="Img/Picture.png" alt="Dominion Okori Portrait" class="profile"/>
+      </div>
+    </div>
+
+    <button class="prev">⟨</button>
+    <button class="next">⟩</button>
+</div>
+    <div class="dot a"></div>
+    <div class="dot b"></div>
+    <div class="dot c"></div>
+    <div class="indicator"></div>
+  
+</header>
+
+<section class="intro" id="Intro">
+  <h1>Dominion Okori</h1>
+  <h2>Hi, I’m Dominion – a young developer and artist.</h2>
+  <p><i>I build simple, functional websites and create illustrations that tell stories.  
+  This portfolio shows a bit of what I’ve been working on.</i></p>
+</section>
+
+<section id="About-me">
+  <h2>About Me</h2>
+  <p>I’m a self-taught coder and artist based in Nigeria.  
+  My focus is on learning the fundamentals of web development and illustration at the same time, and using them to create engaging experiences.</p>
+  <h4>Skills List</h4>
+  <ul>
+    <li>Html, Css ( Beginner web development)</li>
+    <li>Basic Javascript</li>
+    <li>Digital and traditional drawing fundamentals</li>
+    <li>Fast learner and problem solver</li>
+  </ul>
+</section>
+
+<section id="Projects">
+  <h2>Projects</h2>
+  <ul>
+    <li>Personal Website</li>
+    <li>Mini Calculator App</li>
+    <li>Character Sketch Series</li>
+  </ul>
+</section>
+
+<section class="contact" id="Contact">
+  <h2>Get in Touch</h2>
+  <p>I’m always open to learning opportunities, collaborations, and feedback.</p>
+  <ul>
+    <li>Email: Domweb141@gmail.com</li>
+    <li>Facebook: Dominion Okori</li>
+    <li>Tiktok: Dominion Okori</li>
+    <li>Phone: 08107812918</li>
+  </ul>
+</section>
+
+<footer class="copyright">
+  © 2025 Dominion Okori. All rights reserved.
+</footer>
+
+<script type="text/javascript">
+const wrapper = document.querySelector('.slides-wrapper');
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const indicator = document.querySelector('.indicator');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let index = 0;
+let startX = 0;
+let currentX = 0;
+
+function updateSlide() {
+  wrapper.style.transform = `translateX(${-index * 100}%)`;
+  dots.forEach(d => d.style.opacity = 0.4);
+  if (dots[index]) dots[index].style.opacity = 1;
+  indicator.style.left = 130 + (index * 40) + "px";
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  updateSlide();
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+
+// touch support
+wrapper.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  wrapper.style.transition = "none";
+});
+wrapper.addEventListener('touchmove', (e) => {
+  currentX = e.touches[0].clientX;
+  const diff = currentX - startX;
+  wrapper.style.transform = `translateX(${ -index * 100 + (diff / window.innerWidth) * 100 }%)`;
+});
+wrapper.addEventListener('touchend', () => {
+  const diff = currentX - startX;
+  wrapper.style.transition = "transform 0.5s ease";
+  if (diff < -50) nextSlide();
+  else if (diff > 50) prevSlide();
+  else updateSlide();
+  startX = 0; currentX = 0;
+});
+
+// buttons
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+
+// dots
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    index = i;
+    updateSlide();
+  });
+});
+
+// init
+updateSlide();
+</script>
+</body>
+</html>

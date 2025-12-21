@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/812b1b6a87.js" crossorigin="anonymous"></script>
+ 
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+}
+nav{
+width: 100%;
+height: 100px;
+margin: 0;
+position: fixed;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: white;
+z-index: 1;
+box-shadow: 0px 3px 10px #DCDCDC;
+}
+.outer {
+  border: 2px solid black;   /* the outer frame */
+  background-color: white;   /* the empty space you want */
+  display: inline-block;     /* shrink to fit content */
+  padding: 2px;        /* the “gap” around the inner rectangle */
+  margin-left: 30px;
+  /* FORM logo animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: logoIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes logoIn {
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.inner {
+  background-color: black; /* the main rectangle */
+  width: 90px;
+  height: 38px;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+.circle{
+width: 45px;
+height: 45px;
+border-radius: 50%;
+border: 2px solid black;
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.options{
+display: flex;
+gap: 10px;
+margin-right: 20px;
+}
+.circle.menu{
+background: black;
+color: white;
+}
+.circle.share{
+background: white;
+color: black;
+
+}
+img {
+width: 100%;
+height: 230px;
+margin-top: 100px;
+object-fit: cover;
+}
+.hero{
+position: relative;
+}
+.hero h1 {
+  position: absolute;
+  bottom: 100px;
+  margin-left: 25px;
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #fff;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroText 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes heroText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro{
+font-size: 25px;
+margin: 20px;
+padding: 10px;
+word-spacing: 3px;
+letter-spacing: 2px;
+}
+.fa-paper-plane {
+  font-size: 23px;
+}
+.fa-bars{
+font-size: 23px;
+}
+.body{
+font-size: 20px;
+margin: 20px;
+margin-top: 36px;
+padding: 10px;
+word-spacing: 2px;
+letter-spacing: 1px;
+}
+ul{
+font-size: 20px;
+margin: 17px;
+}
+li{
+margin-bottom: 10px;
+}
+.quote {
+padding: 8px;
+padding-left: 25px;
+font-size: 16px;
+letter-spacing: 2px;
+border-left: 2px solid deepskyblue;
+background: #f9f9f9;
+}
+.help{
+width: 100%;
+height: 840px;
+background: #F2F2F2;
+color: black;
+text-align: left;
+}
+.help h1{
+font-size: 46px;
+font-weight: 400;
+margin-left: 27px;
+padding-top: 50px;
+}
+.help p{
+font-size: 10px;
+padding: 10px;
+margin: 19px;
+margin-top: 2px;
+}
+.form{
+  width: 90%;
+  /* Add these lines to the .form selector */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;    /* Center children horizontally */
+}
+
+input{
+margin: 10px;
+margin-left: 27px;
+width: 80%;
+height: 20px;
+border: none;
+border-bottom: 1px solid black;
+background: #F2F2F2;
+
+}
+form h4{
+margin-left: 27px;
+margin-top: 10px;
+padding-bottom: 15px;
+font-weight: 300;
+}
+.submit{
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: none;
+background: deepskyblue;
+font-size: 12px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+  /* Remove the old fixed margin and just use a vertical margin */
+  margin: 120px 0 20px 27px; /* Top: 120px, Left/Right: 0, Bottom: 20px */
+  /* ... rest of the .submit styles ... */
+}
+
+
+.galary{
+  width: 100%;
+  /* Change fixed 'height' to flexible 'min-height' and set 'height: auto' */
+  min-height: 50vh; /* Set a reasonable minimum height */
+  height: auto;     /* Let content define the final height */
+  background: white;
+  margin: 0;
+}
+
+.galary img{
+margin-top: 10px;;
+width: 100%;
+height: 220px;
+}
+
+footer{
+width: 100%;
+height: 130vh;
+background: black;
+}
+footer p{
+color: #D5D5D5;
+padding: 20px;
+margin-left: 20px;
+font-size: 24px;
+margin: 30px;
+padding-bottom: 35px;
+border-bottom: 0.1px solid #333;
+}
+footer ul{
+color: #D5D5D5;
+padding: 20px;
+margin-left: 20px;
+font-size: 24px;
+margin: 30px;
+padding-bottom: 35px;
+border-bottom: 0.1px solid #333;
+}
+
+.right{
+font-size: 15px;
+text-align: center;
+color: #888;
+}
+
+.outer.A{
+border: 2px solid white;
+background: black;
+}
+.inner.A{
+background: white;
+color: black;
+}
+
+footer h1{
+color: white;
+text-align: center;
+font-size: 35px;
+
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid deepskyblue;
+  transition: border-bottom 0.25s ease;
+  }
+  .img-box {
+  position: relative;
+  overflow: hidden;
+  height: 220px; /* match image height */
+  }
+  
+  .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  }
+  
+  .img-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  }
+  
+  .img-box h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 35px;
+  letter-spacing: 3px;
+  opacity: 1; /* visible by default */
+  transform: translateY(0);
+  transition: all 0.4s ease;
+  }
+  
+  .img-box:hover img {
+  transform: scale(1.08);
+  }
+  
+  .img-box:hover::after {
+  opacity: 1;
+  }
+  
+  .img-box:hover h2 {
+  /* optional hover animation if you want */
+  transform: translateY(-5px);
+  }
+  
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="outer">
+  <div class="inner">
+    FORM
+  </div>
+</div>
+
+<div class="options">
+<div class="circle share"><i class="fa-regular fa-paper-plane"></i></div>
+<div class="circle menu"><i class="fa-solid fa-bars"></i></div>
+</div>
+</nav>
+
+<div class="hero">
+<img src="Img/1st.jpg" loading="lazy">
+<h1>WE SPEAK FLUENT <br> NONPROFIT.</h1>
+</div>
+<section class="intro">
+<p>
+Your nonprofit is too important to trust to commercial agencies that don't understand your needs. At FORM, we only work with mission-driven organizations. Our experts have helped nonprofits grow for over 20 years – and we don't market cars and cosmetics on the side.
+</p>
+</section>
+
+<section class="body">
+<p>Skip the hassle of translation and work directly with us – a seasoned marketing firm and one of the few in the nation that specializes in the nonprofit space. Our talented, tech-savvy team of NPO experts understands the complex art and science of inspiring support. Whether your goal is to increase revenue, raise awareness, or call for action, we'll build a strategic marketing approach to grow your nonprofit
+<br>
+<br>
+<br>
+We are dedicated to serving only NPOs:
+</p>
+<br>
+<br>
+<ul>
+<li>Arts + Cultural Organizations</li>
+<li>Health + Human Services </li>
+<li>Education</li>
+<li>Foundations + Community Organizations</li>
+</ul>
+
+<p class="quote"><i>See how we've helped other nonprofits like yours in the case studies below, and fill out the form to arrange a consultation.</i></p>
+</section>
+
+<section class="help">
+
+<h1>HOW CAN WE HELP?</h1>
+<p><i>Whether you need strategic web design, digital marketing, branding or apps, we are here to help your nonprofit thrive.</i></p>
+
+<form>
+<div><h4>FIRST NAME</h4><input type="text" placeholder="First Name"></div>
+<div><h4>LAST NAME</h4><input type="text" placeholder="Last Name"></div>
+<div><h4>EMAIL ADDRESS</h4><input text="text" placeholder="Email Address"></div>
+<div><h4>NONPROFIT NAME</h4><input text="text" placeholder="Nonprofit Name"></div>
+<div><h4>MESSAGE</h4><input text="text" placeholder="Message"></div>
+
+<button class="submit">SUBMIT</button>
+</form>
+</section>
+
+<section class="galary">
+
+  <div class="img-box">
+    <img src="Img/1.jpg">
+    <h2>BUSINESS</h2>
+  </div>
+
+  <div class="img-box">
+    <img src="Img/2.jpg">
+    <h2>LEARNING</h2>
+  </div>
+
+  <div class="img-box">
+    <img src="Img/3.jpg">
+    <h2>ART & CULTURE</h2>
+  </div>
+
+  <div class="img-box">
+    <img src="Img/4.jpg">
+    <h2>TRAVEL</h2>
+  </div>
+
+</section>
+
+<footer>
+<br>
+<br>
+<h1>CONTACT US</h1>
+<br>
+<p>We are a digital-first creative agency for arts & culture and nonprofits. We help our mission-driven clients thrive and connect with patrons through integrated web design, digital marketing, branding, and digital experiences.</p>
+
+<ul>
+<li>Call: 08107812918</li>
+<li>Email:domweb141@gmail.com</li>
+<li>Facebook: Dominion Okori</li>
+</ul>
+<div class="outer A">
+  <div class="inner A">
+    FORM
+  </div>
+</div>
+
+<p class="right">©Copyright 2025 FORM. All rights reserved | Privacy Policy | Google API Disclosure</p>
+
+
+</footer>
+</body>
+</html>>
